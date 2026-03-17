@@ -1,37 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GutSimple — Clear Answers. Trusted Gastroenterology.</title>
-  <meta name="description" content="Understanding your gut, one simple explanation at a time. Patient-first gastroenterology information in plain language.">
+  <title>GutSimple — גסטרואנטרולוגיה בגובה העיניים</title>
+  <meta name="description" content="הסברים ברורים על מחלות ובדיקות גסטרואנטרולוגיות בשפה פשוטה. ד&quot;ר שחר איל, גסטרואנטרולוג.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind config must come BEFORE the CDN script -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             gs: {
-              /* ── Brand tokens ── */
-              primary:        '#1F3A5F',   /* navy — headings, footer, trust */
-              secondary:      '#2FA4A9',   /* teal — primary CTAs            */
-              'secondary-dk': '#238E93',   /* teal hover                     */
-              accent:         '#5BC0EB',   /* sky — icons, highlights        */
-              bg:             '#F7F9FB',   /* off-white — page background    */
-              warm:           '#F4EDE4',   /* warm cream — section separator */
-              /* ── Semantic surface tokens ── */
-              'teal-tint':    '#EAF5F6',   /* light teal bg (eyebrow, badges)*/
-              'teal-border':  '#B3DDE0',   /* teal border                    */
-              'warm-border':  '#E5D9CE',   /* warm section border            */
-              /* ── Text tokens ── */
-              body:           '#3D556E',   /* body text — dark blue-gray     */
-              muted:          '#6E8A9E',   /* muted / helper text            */
-              /* ── Structural ── */
-              border:         '#D6E4EE',   /* default border                 */
+              primary:        '#1F3A5F',
+              secondary:      '#2FA4A9',
+              'secondary-dk': '#238E93',
+              accent:         '#5BC0EB',
+              bg:             '#F7F9FB',
+              warm:           '#F4EDE4',
+              'teal-tint':    '#EAF5F6',
+              'teal-border':  '#B3DDE0',
+              'warm-border':  '#E5D9CE',
+              body:           '#3D556E',
+              muted:          '#6E8A9E',
+              border:         '#D6E4EE',
             }
           }
         }
@@ -44,10 +39,8 @@
   <style>
     * { font-family: 'Inter', sans-serif; }
 
-    /* ── Scroll animations ── */
     .animate-on-scroll {
-      opacity: 0;
-      transform: translateY(24px);
+      opacity: 0; transform: translateY(24px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
     .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
@@ -55,29 +48,34 @@
     .animate-fade { opacity: 0; transition: opacity 0.8s ease; }
     .animate-fade.is-visible { opacity: 1; }
 
-    .animate-slide-left {
-      opacity: 0; transform: translateX(-32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .animate-slide-left.is-visible { opacity: 1; transform: translateX(0); }
-
     .animate-slide-right {
       opacity: 0; transform: translateX(32px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
     .animate-slide-right.is-visible { opacity: 1; transform: translateX(0); }
 
-    /* ── Bounce for scroll indicator ── */
+    .animate-slide-left {
+      opacity: 0; transform: translateX(-32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .animate-slide-left.is-visible { opacity: 1; transform: translateX(0); }
+
     @keyframes bounce-gentle {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(7px); }
     }
     .bounce-gentle { animation: bounce-gentle 2.2s ease-in-out infinite; }
 
-    /* ── Dot grid texture (blue-gray tint) ── */
-    .dot-grid {
-      background-image: radial-gradient(circle, #C5D3E0 1px, transparent 1px);
+    /* Hero dot-grid — light on dark */
+    .dot-grid-dark {
+      background-image: radial-gradient(circle, rgba(91,192,235,0.18) 1px, transparent 1px);
       background-size: 28px 28px;
+    }
+
+    /* Colored section divider */
+    .section-wave {
+      height: 4px;
+      background: linear-gradient(90deg, #1F3A5F 0%, #2FA4A9 50%, #5BC0EB 100%);
     }
 
     html { scroll-behavior: smooth; }
@@ -86,109 +84,129 @@
 <body class="bg-gs-bg text-gs-primary antialiased">
 
   <!-- ─── Navigation ─── -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-gs-bg/90 backdrop-blur-sm border-b border-gs-border transition-shadow duration-300">
+  <nav id="navbar" class="fixed top-0 right-0 left-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gs-border transition-shadow duration-300">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
       <div class="flex items-center gap-2">
         <i data-lucide="activity" class="w-5 h-5 text-gs-secondary"></i>
         <span class="font-bold text-gs-primary text-lg tracking-tight">GutSimple</span>
       </div>
+      <!-- Nav links -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#how-it-works" class="text-sm text-gs-muted hover:text-gs-primary transition-colors">How It Works</a>
-        <a href="#features"     class="text-sm text-gs-muted hover:text-gs-primary transition-colors">Features</a>
-        <a href="#about"        class="text-sm text-gs-muted hover:text-gs-primary transition-colors">About</a>
+        <a href="#how-it-works" class="text-sm text-gs-muted hover:text-gs-primary transition-colors">איך זה עובד</a>
+        <a href="#features"     class="text-sm text-gs-muted hover:text-gs-primary transition-colors">נושאים</a>
+        <a href="#about"        class="text-sm text-gs-muted hover:text-gs-primary transition-colors">אודות</a>
       </div>
       <a href="#features" class="bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
-        Get Started
+        בואו נתחיל
       </a>
     </div>
   </nav>
 
-  <!-- ─── Hero ─── -->
-  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-    <div class="absolute inset-0 dot-grid opacity-40"></div>
-    <div class="absolute inset-0 bg-gradient-to-b from-gs-bg via-gs-bg/95 to-gs-bg/80"></div>
+  <!-- ─── Hero — navy background ─── -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gs-primary">
+    <div class="absolute inset-0 dot-grid-dark"></div>
+    <!-- Subtle teal glow bottom-right -->
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full opacity-10" style="background: radial-gradient(circle, #2FA4A9, transparent 70%);"></div>
 
     <div class="relative max-w-6xl mx-auto px-6 py-24 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        <!-- Left: Copy -->
+        <!-- Right (RTL = main content) -->
         <div>
           <div class="animate-fade" style="transition-delay:0ms">
-            <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary bg-gs-teal-tint border border-gs-teal-border px-3 py-1.5 rounded-full mb-8">
-              Patient-First Gastroenterology
+            <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gs-accent bg-white/10 border border-white/20 px-3 py-1.5 rounded-full mb-8">
+              גסטרואנטרולוגיה בגובה העיניים
             </span>
           </div>
 
-          <h1 class="animate-on-scroll text-6xl md:text-7xl font-bold tracking-tight text-gs-primary leading-none mb-6" style="transition-delay:100ms">
-            Gut<span class="underline decoration-[#5BC0EB] decoration-4 underline-offset-8">Simple</span>
-          </h1>
+          <!-- Brand name stays English -->
+          <div class="animate-on-scroll mb-3" style="transition-delay:80ms">
+            <span class="text-6xl md:text-7xl font-bold tracking-tight text-white leading-none">
+              Gut<span class="text-gs-accent underline decoration-2 underline-offset-8">Simple</span>
+            </span>
+          </div>
 
-          <p class="animate-on-scroll text-2xl font-medium text-gs-body mb-4 leading-snug" style="transition-delay:200ms">
+          <!-- English tagline -->
+          <p class="animate-on-scroll text-base font-medium text-white/50 mb-6 tracking-wide" style="transition-delay:150ms" dir="ltr">
             Clear Answers. Trusted Gastroenterology.
           </p>
 
-          <p class="animate-on-scroll text-lg text-gs-muted mb-10 leading-relaxed max-w-lg" style="transition-delay:300ms">
-            Understanding your gut, one simple explanation at a time.
+          <p class="animate-on-scroll text-2xl font-semibold text-white mb-4 leading-snug" style="transition-delay:220ms">
+            הבנת המעיים שלך, הסבר אחד פשוט בכל פעם.
+          </p>
+
+          <p class="animate-on-scroll text-lg text-white/70 mb-10 leading-relaxed max-w-lg" style="transition-delay:300ms">
+            רוב המטופלים יוצאים מהמרפאה עם יותר שאלות מתשובות. כאן תמצאו הסברים ברורים, בשפת אנשים — על מחלות, בדיקות ותסמינים בגסטרואנטרולוגיה.
           </p>
 
           <div class="animate-on-scroll flex flex-col sm:flex-row items-start sm:items-center gap-4" style="transition-delay:400ms">
             <a href="#how-it-works"
-               class="inline-flex items-center gap-2 bg-gs-secondary hover:bg-gs-secondary-dk text-white px-8 py-4 rounded-2xl font-semibold text-base transition-all shadow-sm hover:shadow-md">
-              <span dir="rtl" lang="he">גסטרואנטרולוגיה בגובה העיניים</span>
+               class="inline-flex items-center gap-2 bg-gs-secondary hover:bg-gs-secondary-dk text-white px-8 py-4 rounded-2xl font-bold text-base transition-all shadow-lg hover:shadow-xl">
+              גלה עוד
+              <i data-lucide="arrow-left" class="w-5 h-5"></i>
             </a>
-            <a href="#how-it-works"
-               class="text-gs-secondary hover:text-gs-secondary-dk font-medium text-sm flex items-center gap-1.5 hover:underline underline-offset-4 transition-colors">
-              Learn how it works
+            <a href="#features"
+               class="text-white/70 hover:text-white font-medium text-sm flex items-center gap-1.5 hover:underline underline-offset-4 transition-colors">
+              מה תמצאו כאן
               <i data-lucide="arrow-down" class="w-4 h-4"></i>
             </a>
           </div>
 
-          <p class="animate-fade text-sm text-gs-muted mt-3" style="transition-delay:500ms">
-            Gastroenterology at eye level
-          </p>
+          <!-- Doctor attribution -->
+          <div class="animate-fade flex items-center gap-3 mt-10 pt-8 border-t border-white/10" style="transition-delay:500ms">
+            <div class="w-10 h-10 rounded-full bg-gs-secondary/30 border border-gs-secondary flex items-center justify-center flex-shrink-0">
+              <i data-lucide="user" class="w-5 h-5 text-gs-accent"></i>
+            </div>
+            <div>
+              <p class="text-white text-sm font-semibold">ד״ר שחר איל</p>
+              <p class="text-white/50 text-xs">מומחה גסטרואנטרולוגיה</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Right: Visual card -->
-        <div class="animate-slide-right hidden lg:flex justify-center" style="transition-delay:250ms">
+        <!-- Left (RTL = visual) -->
+        <div class="animate-slide-left hidden lg:flex justify-center" style="transition-delay:250ms">
           <div class="relative">
-            <div class="bg-white border border-gs-border rounded-2xl p-8 shadow-sm w-80">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="w-10 h-10 bg-gs-teal-tint rounded-xl flex items-center justify-center">
-                  <i data-lucide="activity" class="w-5 h-5 text-gs-secondary"></i>
+            <!-- Main card -->
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-7 w-80">
+              <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 bg-gs-secondary/20 border border-gs-secondary/40 rounded-xl flex items-center justify-center">
+                  <i data-lucide="stethoscope" class="w-5 h-5 text-gs-accent"></i>
                 </div>
                 <div>
-                  <p class="text-sm font-semibold text-gs-primary">Digestive Health</p>
-                  <p class="text-xs text-gs-muted">Explained simply</p>
+                  <p class="text-sm font-semibold text-white">בריאות מערכת העיכול</p>
+                  <p class="text-xs text-white/50">בשפה פשוטה</p>
                 </div>
               </div>
               <div class="space-y-2.5">
-                <div class="flex items-center gap-3 p-3 bg-gs-bg rounded-xl">
+                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
                   <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-gs-body">IBS &amp; Crohn's explained</span>
+                  <span class="text-sm text-white/80">IBS וקרוהן — הסבר מלא</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 bg-gs-bg rounded-xl">
+                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
                   <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-gs-body">Colonoscopy prep guide</span>
+                  <span class="text-sm text-white/80">מדריך לקראת קולונוסקופיה</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 bg-gs-bg rounded-xl">
+                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
                   <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-gs-body">Symptom decoder</span>
+                  <span class="text-sm text-white/80">פענוח תסמינים נפוצים</span>
                 </div>
-                <div class="flex items-center gap-3 p-3 bg-gs-bg rounded-xl">
+                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
                   <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-gs-body">Medication guidance</span>
+                  <span class="text-sm text-white/80">מדריך תרופות ותזונה</span>
                 </div>
               </div>
             </div>
-            <!-- Floating label -->
-            <div class="absolute -top-4 -right-4 bg-gs-secondary text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-sm">
-              In plain language
+            <!-- Floating badge top-left (RTL) -->
+            <div class="absolute -top-4 -left-4 bg-gs-secondary text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg">
+              בשפת אנשים
             </div>
-            <!-- Floating badge -->
-            <div class="absolute -bottom-4 -left-4 bg-white border border-gs-border rounded-xl p-3 shadow-sm">
+            <!-- Floating trust badge -->
+            <div class="absolute -bottom-4 -right-4 bg-white rounded-xl p-3 shadow-lg">
               <div class="flex items-center gap-2">
-                <i data-lucide="users" class="w-4 h-4 text-gs-accent"></i>
-                <span class="text-xs font-semibold text-gs-primary">Patient-first</span>
+                <i data-lucide="shield-check" class="w-4 h-4 text-gs-secondary"></i>
+                <span class="text-xs font-bold text-gs-primary">בדוק רפואית</span>
               </div>
             </div>
           </div>
@@ -197,145 +215,146 @@
       </div>
 
       <!-- Scroll indicator -->
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none">
-        <span class="text-xs text-gs-muted font-medium tracking-widest uppercase">Scroll</span>
-        <i data-lucide="chevron-down" class="w-5 h-5 text-gs-border bounce-gentle"></i>
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none">
+        <span class="text-xs text-white/30 font-medium tracking-widest uppercase">גלול</span>
+        <i data-lucide="chevron-down" class="w-5 h-5 text-white/20 bounce-gentle"></i>
       </div>
     </div>
   </section>
 
-  <!-- ─── How It Works ─── -->
+  <!-- Color band divider -->
+  <div class="section-wave"></div>
+
+  <!-- ─── How It Works — white ─── -->
   <section id="how-it-works" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
 
       <div class="text-center mb-16">
-        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">The Process</span>
-        <h2 class="animate-on-scroll text-4xl font-semibold tracking-tight text-gs-primary" style="transition-delay:100ms">
-          Simple. Transparent. Yours.
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">התהליך</span>
+        <h2 class="animate-on-scroll text-4xl font-bold tracking-tight text-gs-primary" style="transition-delay:100ms">
+          פשוט. שקוף. שלך.
         </h2>
         <p class="animate-on-scroll text-lg text-gs-muted mt-4 max-w-lg mx-auto" style="transition-delay:200ms">
-          Three steps from confusion to clarity.
+          שלושה שלבים מבלבול לבהירות.
         </p>
       </div>
 
       <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Dashed connector (desktop) -->
-        <div class="hidden md:block absolute top-14 left-[36%] right-[36%] border-t-2 border-dashed border-gs-border z-0"></div>
+        <div class="hidden md:block absolute top-14 right-[36%] left-[36%] border-t-2 border-dashed border-gs-border z-0"></div>
 
         <!-- Step 1 -->
-        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-accent hover:shadow-md transition-all z-10" style="transition-delay:0ms">
+        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-lg transition-all z-10 group" style="transition-delay:0ms">
           <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 bg-white border border-gs-border rounded-xl flex items-center justify-center shadow-sm">
-              <i data-lucide="message-circle" class="w-6 h-6 text-gs-secondary"></i>
+            <div class="w-14 h-14 bg-gs-secondary rounded-2xl flex items-center justify-center shadow-md group-hover:bg-gs-secondary-dk transition-colors">
+              <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
             </div>
-            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full">01</span>
+            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full border border-gs-teal-border">01</span>
           </div>
-          <h3 class="text-xl font-semibold text-gs-primary mb-3">Ask Your Question</h3>
-          <p class="text-gs-muted leading-relaxed text-sm">No medical jargon. No intimidating walls of text. Just plain language answers about what's happening in your digestive system.</p>
+          <h3 class="text-xl font-bold text-gs-primary mb-3">שאל את השאלה שלך</h3>
+          <p class="text-gs-muted leading-relaxed text-sm">ללא מינוח רפואי מסובך. ללא קירות של טקסט. רק תשובות בשפה פשוטה על מה שקורה במערכת העיכול שלך.</p>
         </div>
 
         <!-- Step 2 -->
-        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-accent hover:shadow-md transition-all z-10" style="transition-delay:150ms">
+        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-lg transition-all z-10 group" style="transition-delay:150ms">
           <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 bg-white border border-gs-border rounded-xl flex items-center justify-center shadow-sm">
-              <i data-lucide="book-open" class="w-6 h-6 text-gs-secondary"></i>
+            <div class="w-14 h-14 bg-gs-primary rounded-2xl flex items-center justify-center shadow-md group-hover:opacity-90 transition-opacity">
+              <i data-lucide="book-open" class="w-7 h-7 text-white"></i>
             </div>
-            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full">02</span>
+            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full border border-gs-teal-border">02</span>
           </div>
-          <h3 class="text-xl font-semibold text-gs-primary mb-3">Get Clear Explanations</h3>
-          <p class="text-gs-muted leading-relaxed text-sm">Every condition, procedure, and symptom — explained the way a trusted doctor would explain it to a family member.</p>
+          <h3 class="text-xl font-bold text-gs-primary mb-3">קבל הסבר ברור</h3>
+          <p class="text-gs-muted leading-relaxed text-sm">כל מחלה, בדיקה ותסמין — מוסברים כמו שרופא מהימן היה מסביר לבן משפחה שלו.</p>
         </div>
 
         <!-- Step 3 -->
-        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-accent hover:shadow-md transition-all z-10" style="transition-delay:300ms">
+        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-lg transition-all z-10 group" style="transition-delay:300ms">
           <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 bg-white border border-gs-border rounded-xl flex items-center justify-center shadow-sm">
-              <i data-lucide="check-circle-2" class="w-6 h-6 text-gs-secondary"></i>
+            <div class="w-14 h-14 bg-gs-accent rounded-2xl flex items-center justify-center shadow-md group-hover:opacity-90 transition-opacity">
+              <i data-lucide="check-circle-2" class="w-7 h-7 text-white"></i>
             </div>
-            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full">03</span>
+            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full border border-gs-teal-border">03</span>
           </div>
-          <h3 class="text-xl font-semibold text-gs-primary mb-3">Feel Confident</h3>
-          <p class="text-gs-muted leading-relaxed text-sm">Walk into your next appointment informed, prepared, and in control of your own care.</p>
+          <h3 class="text-xl font-bold text-gs-primary mb-3">צא בטוח לדרך</h3>
+          <p class="text-gs-muted leading-relaxed text-sm">הגע לתור הבא שלך מוכן, מיודע, ובשליטה על הבריאות שלך.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ─── Features ─── -->
-  <section id="features" class="py-24 bg-gs-warm">
+  <!-- ─── Features — teal tint ─── -->
+  <section id="features" class="py-24 bg-gs-teal-tint">
     <div class="max-w-6xl mx-auto px-6">
 
       <div class="text-center mb-16">
-        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">What We Offer</span>
-        <h2 class="animate-on-scroll text-4xl font-semibold tracking-tight text-gs-primary leading-tight" style="transition-delay:100ms">
-          Everything You Need to Know<br class="hidden sm:block"> About Your Gut
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">מה תמצאו כאן</span>
+        <h2 class="animate-on-scroll text-4xl font-bold tracking-tight text-gs-primary leading-tight" style="transition-delay:100ms">
+          כל מה שצריך לדעת<br class="hidden sm:block"> על מערכת העיכול
         </h2>
         <p class="animate-on-scroll text-lg text-gs-muted mt-4 max-w-xl mx-auto" style="transition-delay:200ms">
-          From symptoms to treatments — the full picture in language that makes sense.
+          ממחלות ותסמינים ועד בדיקות ותרופות — התמונה המלאה בשפה שמובנת לכולם.
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- F1 -->
-        <div class="animate-on-scroll bg-white border border-gs-warm-border rounded-xl p-6 hover:border-gs-accent hover:shadow-lg transition-all" style="transition-delay:0ms">
-          <div class="w-10 h-10 bg-gs-teal-tint rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="library" class="w-5 h-5 text-gs-secondary"></i>
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:0ms">
+          <div class="w-12 h-12 bg-gs-primary rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="library" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-semibold text-gs-primary mb-2">Condition Library</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">IBS, Crohn's, GERD, celiac, and dozens more — explained clearly with symptoms, causes, and what to expect.</p>
+          <h3 class="text-base font-bold text-gs-primary mb-2">מאגר מחלות ותסמונות</h3>
+          <p class="text-sm text-gs-muted leading-relaxed">IBS, קרוהן, קוליטיס, GERD, צליאק ועוד עשרות מחלות — מוסברות בבהירות עם תסמינים, גורמים ומה לצפות.</p>
         </div>
 
         <!-- F2 -->
-        <div class="animate-on-scroll bg-white border border-gs-warm-border rounded-xl p-6 hover:border-gs-accent hover:shadow-lg transition-all" style="transition-delay:100ms">
-          <div class="w-10 h-10 bg-gs-teal-tint rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="stethoscope" class="w-5 h-5 text-gs-secondary"></i>
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:100ms">
+          <div class="w-12 h-12 bg-gs-secondary rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="stethoscope" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-semibold text-gs-primary mb-2">Procedure Guides</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">Colonoscopy prep demystified. Endoscopy explained. Know what happens before, during, and after.</p>
+          <h3 class="text-base font-bold text-gs-primary mb-2">מדריך לבדיקות ופרוצדורות</h3>
+          <p class="text-sm text-gs-muted leading-relaxed">הכנה לקולונוסקופיה, גסטרוסקופיה ועוד — מה קורה לפני, במהלך ואחרי הבדיקה, בלי הפתעות.</p>
         </div>
 
         <!-- F3 -->
-        <div class="animate-on-scroll bg-white border border-gs-warm-border rounded-xl p-6 hover:border-gs-accent hover:shadow-lg transition-all" style="transition-delay:200ms">
-          <div class="w-10 h-10 bg-gs-teal-tint rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="search" class="w-5 h-5 text-gs-secondary"></i>
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:200ms">
+          <div class="w-12 h-12 bg-gs-accent rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="search" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-semibold text-gs-primary mb-2">Symptom Decoder</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">Bloating, pain, changes in stool — understand what your body might be signaling without a Google spiral.</p>
+          <h3 class="text-base font-bold text-gs-primary mb-2">פענוח תסמינים</h3>
+          <p class="text-sm text-gs-muted leading-relaxed">נפיחות, כאבי בטן, שינויים ביציאות — הבנת מה הגוף שלך אומר, בלי סחרחורת מ-Google.</p>
         </div>
 
         <!-- F4 -->
-        <div class="animate-on-scroll bg-white border border-gs-warm-border rounded-xl p-6 hover:border-gs-accent hover:shadow-lg transition-all" style="transition-delay:300ms">
-          <div class="w-10 h-10 bg-gs-teal-tint rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="pill" class="w-5 h-5 text-gs-secondary"></i>
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:300ms">
+          <div class="w-12 h-12 bg-gs-primary rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="pill" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-semibold text-gs-primary mb-2">Medication Index</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">What each drug does, common side effects, and questions worth asking your pharmacist or specialist.</p>
+          <h3 class="text-base font-bold text-gs-primary mb-2">מדריך תרופות</h3>
+          <p class="text-sm text-gs-muted leading-relaxed">מה כל תרופה עושה, תופעות לוואי נפוצות, ושאלות ששווה לשאול את הרופא או הרוקח.</p>
         </div>
 
         <!-- F5 -->
-        <div class="animate-on-scroll bg-white border border-gs-warm-border rounded-xl p-6 hover:border-gs-accent hover:shadow-lg transition-all" style="transition-delay:400ms">
-          <div class="w-10 h-10 bg-gs-teal-tint rounded-lg flex items-center justify-center mb-4">
-            <i data-lucide="leaf" class="w-5 h-5 text-gs-secondary"></i>
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:400ms">
+          <div class="w-12 h-12 bg-gs-secondary rounded-xl flex items-center justify-center mb-4">
+            <i data-lucide="leaf" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-semibold text-gs-primary mb-2">Gut-Friendly Nutrition</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">Low-FODMAP, gluten-free, anti-inflammatory diets — practical, evidence-based guidance without the overwhelm.</p>
+          <h3 class="text-base font-bold text-gs-primary mb-2">תזונה ידידותית לעיכול</h3>
+          <p class="text-sm text-gs-muted leading-relaxed">דיאטת Low-FODMAP, ללא גלוטן, אנטי-דלקתית — הנחיות מעשיות ומבוססות ראיות, בלי מיתוסים.</p>
         </div>
 
         <!-- F6 — CTA card -->
-        <div class="animate-on-scroll bg-gs-teal-tint border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-lg transition-all flex flex-col justify-between" style="transition-delay:500ms">
+        <div class="animate-on-scroll bg-gs-primary rounded-xl p-6 hover:opacity-95 hover:shadow-xl transition-all flex flex-col justify-between" style="transition-delay:500ms">
           <div>
-            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4 border border-gs-teal-border">
-              <i data-lucide="help-circle" class="w-5 h-5 text-gs-secondary"></i>
+            <div class="w-12 h-12 bg-white/15 border border-white/25 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="help-circle" class="w-6 h-6 text-gs-accent"></i>
             </div>
-            <h3 class="text-base font-semibold text-gs-primary mb-2">Still Have Questions?</h3>
-            <p class="text-sm text-gs-body leading-relaxed mb-6">Can't find what you're looking for? Submit a question and we'll add it to the library.</p>
+            <h3 class="text-base font-bold text-white mb-2">עדיין יש לך שאלות?</h3>
+            <p class="text-sm text-white/70 leading-relaxed mb-6">לא מצאת מה שחיפשת? שלח שאלה ונוסיף אותה למאגר.</p>
           </div>
-          <a href="#about" class="inline-flex items-center gap-2 bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors self-start">
-            Ask a Question
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <a href="#about" class="inline-flex items-center gap-2 bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors self-start">
+            שאל שאלה
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
           </a>
         </div>
 
@@ -343,59 +362,84 @@
     </div>
   </section>
 
-  <!-- ─── About ─── -->
-  <section id="about" class="py-24 bg-white">
+  <!-- ─── About — warm cream ─── -->
+  <section id="about" class="py-24 bg-gs-warm">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
-        <!-- Left: Text -->
-        <div class="animate-slide-left">
-          <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">About GutSimple</span>
-          <h2 class="text-4xl font-semibold tracking-tight text-gs-primary mb-6 leading-tight">
-            Medicine Should Never Feel Like a Wall
+        <!-- Right (RTL = text) -->
+        <div class="animate-slide-right">
+          <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">אודות האתר</span>
+          <h2 class="text-4xl font-bold tracking-tight text-gs-primary mb-6 leading-tight">
+            רפואה לא צריכה<br>להיות מסובכת
           </h2>
           <div class="space-y-4">
             <p class="text-gs-body leading-relaxed">
-              Too many patients leave appointments more confused than when they arrived. Medical information online is either oversimplified or inaccessibly technical. GutSimple was built to close that gap.
+              יותר מדי מטופלים יוצאים מהתייעצות עם יותר שאלות מאשר תשובות. המידע הרפואי ברשת הוא לרוב פשטני מדי — או טכני מדי. GutSimple נבנה כדי לגשר על הפער הזה.
             </p>
             <p class="text-gs-body leading-relaxed">
-              We believe that an informed patient is a healthier patient. When you understand what's happening in your body, you ask better questions, follow through on treatment, and feel less afraid.
+              אנחנו מאמינים שמטופל מיודע הוא מטופל בריא יותר. כשמבינים מה קורה בגוף, שואלים שאלות טובות יותר, ממלאים אחר הטיפול — ומרגישים פחות חרדה.
             </p>
             <p class="text-gs-body leading-relaxed">
-              Our content is written by gastroenterology professionals and reviewed for accuracy — then rewritten by humans who know that "gastroparesis" needs more than a dictionary definition.
+              התכנים נכתבים על ידי אנשי מקצוע בגסטרואנטרולוגיה ומועברים לשפה שכולם מבינים — כי "גסטרופרזיס" צריך יותר מהגדרה מילונית.
             </p>
           </div>
 
           <!-- Trust badges -->
-          <div class="animate-fade flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-gs-border" style="transition-delay:300ms">
+          <div class="animate-fade flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-gs-warm-border" style="transition-delay:300ms">
             <div class="flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-4 h-4 text-gs-secondary"></i>
-              <span class="text-sm text-gs-body font-medium">Clinically Reviewed</span>
+              <div class="w-8 h-8 bg-gs-secondary rounded-lg flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
+              </div>
+              <span class="text-sm text-gs-body font-semibold">בדוק רפואית</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="users" class="w-4 h-4 text-gs-secondary"></i>
-              <span class="text-sm text-gs-body font-medium">Patient-First Voice</span>
+              <div class="w-8 h-8 bg-gs-primary rounded-lg flex items-center justify-center">
+                <i data-lucide="users" class="w-4 h-4 text-white"></i>
+              </div>
+              <span class="text-sm text-gs-body font-semibold">שפת מטופלים</span>
             </div>
             <div class="flex items-center gap-2">
-              <i data-lucide="globe" class="w-4 h-4 text-gs-secondary"></i>
-              <span class="text-sm text-gs-body font-medium">Hebrew &amp; English</span>
+              <div class="w-8 h-8 bg-gs-accent rounded-lg flex items-center justify-center">
+                <i data-lucide="globe" class="w-4 h-4 text-white"></i>
+              </div>
+              <span class="text-sm text-gs-body font-semibold">עברית ואנגלית</span>
             </div>
           </div>
         </div>
 
-        <!-- Right: Testimonial card -->
-        <div class="animate-slide-right" style="transition-delay:200ms">
+        <!-- Left (RTL = testimonial) -->
+        <div class="animate-slide-left" style="transition-delay:200ms">
+          <!-- Doctor card -->
+          <div class="relative mb-6">
+            <div class="bg-gs-primary rounded-2xl p-7 text-white">
+              <div class="flex items-center gap-4 mb-5">
+                <div class="w-14 h-14 rounded-full bg-gs-secondary/30 border-2 border-gs-secondary flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="user" class="w-7 h-7 text-gs-accent"></i>
+                </div>
+                <div>
+                  <p class="font-bold text-lg">ד״ר שחר איל</p>
+                  <p class="text-white/60 text-sm">מומחה גסטרואנטרולוגיה</p>
+                </div>
+              </div>
+              <p class="text-white/80 leading-relaxed text-sm italic">
+                "המטרה שלי היא שכל מטופל יצא מהתור שלנו עם תחושת שליטה — לא בלבול. GutSimple הוא הדרך להמשיך את השיחה גם מחוץ לקליניקה."
+              </p>
+            </div>
+          </div>
+
+          <!-- Testimonial card -->
           <div class="relative">
-            <div class="absolute inset-0 bg-gs-bg border border-gs-border rounded-2xl -z-10" style="transform: rotate(-1.5deg);"></div>
-            <div class="relative bg-gs-teal-tint border border-gs-teal-border rounded-2xl p-8" style="transform: rotate(1deg);">
-              <div class="text-5xl font-serif leading-none mb-4 select-none" style="color:#2FA4A9">"</div>
-              <p class="text-xl text-gs-primary font-medium leading-relaxed mb-6">
-                For the first time, I actually understood what my doctor was telling me.
+            <div class="absolute inset-0 bg-white border border-gs-warm-border rounded-2xl -z-10" style="transform: rotate(-1deg);"></div>
+            <div class="relative bg-white border border-gs-teal-border rounded-2xl p-7" style="transform: rotate(0.8deg);">
+              <div class="text-5xl font-serif leading-none mb-3 select-none" style="color:#2FA4A9">"</div>
+              <p class="text-lg text-gs-primary font-semibold leading-relaxed mb-5">
+                בפעם הראשונה הבנתי מה הרופא שלי אמר לי.
               </p>
               <div class="flex items-center justify-between">
                 <div>
-                  <p class="text-sm font-semibold text-gs-primary">Sarah M.</p>
-                  <p class="text-xs text-gs-muted">Patient, Tel Aviv</p>
+                  <p class="text-sm font-bold text-gs-primary">שרה מ.</p>
+                  <p class="text-xs text-gs-muted">מטופלת, תל אביב</p>
                 </div>
                 <div class="flex items-center gap-0.5">
                   <svg class="w-4 h-4" fill="#2FA4A9" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -413,39 +457,45 @@
     </div>
   </section>
 
-  <!-- ─── Footer ─── -->
+  <!-- Color band divider -->
+  <div class="section-wave"></div>
+
+  <!-- ─── Footer — navy ─── -->
   <footer class="bg-gs-primary text-white/60">
     <div class="max-w-6xl mx-auto px-6 py-12">
 
-      <!-- Top row -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-8">
+        <!-- Logo -->
         <div class="flex items-center gap-2">
           <i data-lucide="activity" class="w-5 h-5 text-gs-accent"></i>
           <span class="font-bold text-white text-lg tracking-tight">GutSimple</span>
         </div>
+        <!-- Nav -->
         <nav class="flex items-center gap-6 justify-center flex-wrap">
-          <a href="#how-it-works" class="text-sm hover:text-white transition-colors">How It Works</a>
-          <a href="#features"     class="text-sm hover:text-white transition-colors">Features</a>
-          <a href="#about"        class="text-sm hover:text-white transition-colors">About</a>
-          <a href="#about"        class="text-sm hover:text-white transition-colors">Contact</a>
+          <a href="#how-it-works" class="text-sm hover:text-white transition-colors">איך זה עובד</a>
+          <a href="#features"     class="text-sm hover:text-white transition-colors">נושאים</a>
+          <a href="#about"        class="text-sm hover:text-white transition-colors">אודות</a>
+          <a href="#about"        class="text-sm hover:text-white transition-colors">צור קשר</a>
         </nav>
-        <div class="flex md:justify-end">
-          <a href="#features" class="bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
-            Ask a Question
+        <!-- CTA -->
+        <div class="flex md:justify-start">
+          <a href="#features" class="bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-bold px-5 py-2 rounded-lg transition-colors">
+            שאל שאלה
           </a>
         </div>
       </div>
 
-      <!-- Hebrew tagline -->
-      <div class="text-center py-5 border-y border-white/10">
-        <span class="text-white/40 text-sm" dir="rtl" lang="he">גסטרואנטרולוגיה בגובה העיניים</span>
+      <!-- Taglines divider -->
+      <div class="text-center py-5 border-y border-white/10 space-y-1">
+        <p class="text-white/50 text-sm" dir="rtl" lang="he">גסטרואנטרולוגיה בגובה העיניים</p>
+        <p class="text-white/25 text-xs tracking-wide" dir="ltr">Clear Answers. Trusted Gastroenterology.</p>
       </div>
 
-      <!-- Bottom row -->
+      <!-- Bottom -->
       <div class="flex flex-col md:flex-row items-center justify-between gap-4 mt-8">
-        <p class="text-sm">© 2026 GutSimple. All rights reserved.</p>
+        <p class="text-sm">© 2026 GutSimple. כל הזכויות שמורות.</p>
         <p class="text-xs text-white/30 text-center md:text-right max-w-sm">
-          Not a substitute for professional medical advice. Always consult your physician.
+          אין לראות באתר זה תחליף לייעוץ רפואי מקצועי. יש להתייעץ עם רופא.
         </p>
       </div>
 
