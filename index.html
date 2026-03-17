@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GutSimple — גסטרואנטרולוגיה בגובה העיניים</title>
-  <meta name="description" content="הסברים ברורים על מחלות ובדיקות גסטרואנטרולוגיות בשפה פשוטה. ד&quot;ר שחר איל, גסטרואנטרולוג.">
+  <title>GutSimple — גסטרואנטרולוגיה בגובה העיניים | ד״ר איל שחר</title>
+  <meta name="description" content="מידע ותמיכה בגסטרואנטרולוגיה בשפה פשוטה — סרטונים, הדרכות והכנה לבדיקות. ד״ר איל שחר, מומחה גסטרואנטרולוגיה ומחלות כבד, שיבא · מכבי · כללית.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -44,20 +44,11 @@
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
     .animate-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
-
     .animate-fade { opacity: 0; transition: opacity 0.8s ease; }
     .animate-fade.is-visible { opacity: 1; }
-
-    .animate-slide-right {
-      opacity: 0; transform: translateX(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    .animate-slide-right { opacity: 0; transform: translateX(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .animate-slide-right.is-visible { opacity: 1; transform: translateX(0); }
-
-    .animate-slide-left {
-      opacity: 0; transform: translateX(-32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
+    .animate-slide-left { opacity: 0; transform: translateX(-32px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .animate-slide-left.is-visible { opacity: 1; transform: translateX(0); }
 
     @keyframes bounce-gentle {
@@ -66,18 +57,14 @@
     }
     .bounce-gentle { animation: bounce-gentle 2.2s ease-in-out infinite; }
 
-    /* Hero dot-grid — light on dark */
     .dot-grid-dark {
-      background-image: radial-gradient(circle, rgba(91,192,235,0.18) 1px, transparent 1px);
+      background-image: radial-gradient(circle, rgba(91,192,235,0.15) 1px, transparent 1px);
       background-size: 28px 28px;
     }
-
-    /* Colored section divider */
     .section-wave {
       height: 4px;
       background: linear-gradient(90deg, #1F3A5F 0%, #2FA4A9 50%, #5BC0EB 100%);
     }
-
     html { scroll-behavior: smooth; }
   </style>
 </head>
@@ -86,127 +73,125 @@
   <!-- ─── Navigation ─── -->
   <nav id="navbar" class="fixed top-0 right-0 left-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gs-border transition-shadow duration-300">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
       <div class="flex items-center gap-2">
         <i data-lucide="activity" class="w-5 h-5 text-gs-secondary"></i>
         <span class="font-bold text-gs-primary text-lg tracking-tight">GutSimple</span>
       </div>
-      <!-- Nav links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#how-it-works" class="text-sm text-gs-muted hover:text-gs-primary transition-colors">איך זה עובד</a>
-        <a href="#features"     class="text-sm text-gs-muted hover:text-gs-primary transition-colors">נושאים</a>
-        <a href="#about"        class="text-sm text-gs-muted hover:text-gs-primary transition-colors">אודות</a>
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#topics"    class="text-sm text-gs-muted hover:text-gs-primary transition-colors">נושאים</a>
+        <a href="#guides"    class="text-sm text-gs-muted hover:text-gs-primary transition-colors">הדרכות והכנה</a>
+        <a href="#about"     class="text-sm text-gs-muted hover:text-gs-primary transition-colors">אודות</a>
+        <a href="#contact"   class="text-sm text-gs-muted hover:text-gs-primary transition-colors">קביעת תור</a>
       </div>
-      <a href="#features" class="bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
-        בואו נתחיל
+      <a href="#contact" class="bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+        לקביעת תור
       </a>
     </div>
   </nav>
 
-  <!-- ─── Hero — navy background ─── -->
+  <!-- ─── Hero ─── -->
   <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gs-primary">
     <div class="absolute inset-0 dot-grid-dark"></div>
-    <!-- Subtle teal glow bottom-right -->
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full opacity-10" style="background: radial-gradient(circle, #2FA4A9, transparent 70%);"></div>
+    <div class="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-10"
+         style="background: radial-gradient(circle, #2FA4A9, transparent 70%);"></div>
 
     <div class="relative max-w-6xl mx-auto px-6 py-24 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        <!-- Right (RTL = main content) -->
         <div>
           <div class="animate-fade" style="transition-delay:0ms">
-            <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gs-accent bg-white/10 border border-white/20 px-3 py-1.5 rounded-full mb-8">
+            <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gs-accent bg-white/10 border border-white/20 px-3 py-1.5 rounded-full mb-6">
               גסטרואנטרולוגיה בגובה העיניים
             </span>
           </div>
 
-          <!-- Brand name stays English -->
-          <div class="animate-on-scroll mb-3" style="transition-delay:80ms">
+          <div class="animate-on-scroll mb-2" style="transition-delay:80ms">
             <span class="text-6xl md:text-7xl font-bold tracking-tight text-white leading-none">
               Gut<span class="text-gs-accent underline decoration-2 underline-offset-8">Simple</span>
             </span>
           </div>
-
-          <!-- English tagline -->
-          <p class="animate-on-scroll text-base font-medium text-white/50 mb-6 tracking-wide" style="transition-delay:150ms" dir="ltr">
+          <p class="animate-on-scroll text-sm font-medium text-white/35 mb-6 tracking-widest" dir="ltr" style="transition-delay:150ms">
             Clear Answers. Trusted Gastroenterology.
           </p>
 
-          <p class="animate-on-scroll text-2xl font-semibold text-white mb-4 leading-snug" style="transition-delay:220ms">
-            הבנת המעיים שלך, הסבר אחד פשוט בכל פעם.
+          <p class="animate-on-scroll text-2xl font-bold text-white mb-3 leading-snug" style="transition-delay:220ms">
+            מידע ותמיכה בגסטרואנטרולוגיה — בשפת אנשים.
+          </p>
+          <p class="animate-on-scroll text-lg text-white/65 mb-10 leading-relaxed max-w-xl" style="transition-delay:300ms">
+            סרטוני וידאו, פודקאסטים, הדרכות לבדיקות אנדוסקופיות וליווי חכם במחלות מערכת העיכול — הכל במקום אחד, ברמה שכולם מבינים.
           </p>
 
-          <p class="animate-on-scroll text-lg text-white/70 mb-10 leading-relaxed max-w-lg" style="transition-delay:300ms">
-            רוב המטופלים יוצאים מהמרפאה עם יותר שאלות מתשובות. כאן תמצאו הסברים ברורים, בשפת אנשים — על מחלות, בדיקות ותסמינים בגסטרואנטרולוגיה.
-          </p>
-
-          <div class="animate-on-scroll flex flex-col sm:flex-row items-start sm:items-center gap-4" style="transition-delay:400ms">
-            <a href="#how-it-works"
-               class="inline-flex items-center gap-2 bg-gs-secondary hover:bg-gs-secondary-dk text-white px-8 py-4 rounded-2xl font-bold text-base transition-all shadow-lg hover:shadow-xl">
-              גלה עוד
-              <i data-lucide="arrow-left" class="w-5 h-5"></i>
+          <div class="animate-on-scroll flex flex-col sm:flex-row gap-4 items-start" style="transition-delay:400ms">
+            <a href="#topics" class="inline-flex items-center gap-2 bg-gs-secondary hover:bg-gs-secondary-dk text-white px-7 py-4 rounded-2xl font-bold text-base transition-all shadow-lg hover:shadow-xl">
+              לנושאים <i data-lucide="arrow-left" class="w-5 h-5"></i>
             </a>
-            <a href="#features"
-               class="text-white/70 hover:text-white font-medium text-sm flex items-center gap-1.5 hover:underline underline-offset-4 transition-colors">
-              מה תמצאו כאן
-              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            <a href="#guides" class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white px-7 py-4 rounded-2xl font-semibold text-base transition-all">
+              הדרכות והכנה <i data-lucide="play-circle" class="w-5 h-5"></i>
             </a>
           </div>
 
-          <!-- Doctor attribution -->
           <div class="animate-fade flex items-center gap-3 mt-10 pt-8 border-t border-white/10" style="transition-delay:500ms">
-            <div class="w-10 h-10 rounded-full bg-gs-secondary/30 border border-gs-secondary flex items-center justify-center flex-shrink-0">
+            <div class="w-10 h-10 rounded-full bg-gs-secondary/25 border border-gs-secondary flex items-center justify-center flex-shrink-0">
               <i data-lucide="user" class="w-5 h-5 text-gs-accent"></i>
             </div>
             <div>
-              <p class="text-white text-sm font-semibold">ד״ר שחר איל</p>
-              <p class="text-white/50 text-xs">מומחה גסטרואנטרולוגיה</p>
+              <p class="text-white text-sm font-bold">ד״ר איל שחר</p>
+              <p class="text-white/45 text-xs">מומחה גסטרואנטרולוגיה ומחלות כבד | שיבא · מכבי · כללית · אסותא</p>
             </div>
           </div>
         </div>
 
-        <!-- Left (RTL = visual) -->
+        <!-- Visual card -->
         <div class="animate-slide-left hidden lg:flex justify-center" style="transition-delay:250ms">
           <div class="relative">
-            <!-- Main card -->
             <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-7 w-80">
-              <div class="flex items-center gap-3 mb-5">
-                <div class="w-10 h-10 bg-gs-secondary/20 border border-gs-secondary/40 rounded-xl flex items-center justify-center">
-                  <i data-lucide="stethoscope" class="w-5 h-5 text-gs-accent"></i>
+              <p class="text-xs font-semibold uppercase tracking-widest text-gs-accent mb-5">מה תמצאו כאן</p>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3 p-3.5 bg-white/8 rounded-xl border border-white/10">
+                  <div class="w-8 h-8 bg-gs-secondary/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="heart-pulse" class="w-4 h-4 text-gs-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-white text-sm font-semibold">מחלות ותסמינים</p>
+                    <p class="text-white/45 text-xs">IBS, צרבת, כבד שומני ועוד</p>
+                  </div>
                 </div>
-                <div>
-                  <p class="text-sm font-semibold text-white">בריאות מערכת העיכול</p>
-                  <p class="text-xs text-white/50">בשפה פשוטה</p>
+                <div class="flex items-center gap-3 p-3.5 bg-white/8 rounded-xl border border-white/10">
+                  <div class="w-8 h-8 bg-gs-secondary/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="video" class="w-4 h-4 text-gs-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-white text-sm font-semibold">סרטוני הכנה לבדיקות</p>
+                    <p class="text-white/45 text-xs">קולונוסקופיה, גסטרוסקופיה ועוד</p>
+                  </div>
                 </div>
-              </div>
-              <div class="space-y-2.5">
-                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-white/80">IBS וקרוהן — הסבר מלא</span>
+                <div class="flex items-center gap-3 p-3.5 bg-white/8 rounded-xl border border-white/10">
+                  <div class="w-8 h-8 bg-gs-secondary/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="flame" class="w-4 h-4 text-gs-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-white text-sm font-semibold">מחלות המעי הדלקתיות</p>
+                    <p class="text-white/45 text-xs">קרוהן, קוליטיס — מחלה וחיים</p>
+                  </div>
                 </div>
-                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-white/80">מדריך לקראת קולונוסקופיה</span>
-                </div>
-                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-white/80">פענוח תסמינים נפוצים</span>
-                </div>
-                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
-                  <i data-lucide="check-circle-2" class="w-4 h-4 text-gs-accent flex-shrink-0"></i>
-                  <span class="text-sm text-white/80">מדריך תרופות ותזונה</span>
+                <div class="flex items-center gap-3 p-3.5 bg-white/8 rounded-xl border border-white/10">
+                  <div class="w-8 h-8 bg-gs-secondary/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="bot" class="w-4 h-4 text-gs-accent"></i>
+                  </div>
+                  <div>
+                    <p class="text-white text-sm font-semibold">בוט הכנה חכמה (AI)</p>
+                    <p class="text-white/45 text-xs">סיוע מותאם אישית לבדיקה</p>
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- Floating badge top-left (RTL) -->
             <div class="absolute -top-4 -left-4 bg-gs-secondary text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg">
-              בשפת אנשים
+              בדוק רפואית
             </div>
-            <!-- Floating trust badge -->
             <div class="absolute -bottom-4 -right-4 bg-white rounded-xl p-3 shadow-lg">
               <div class="flex items-center gap-2">
                 <i data-lucide="shield-check" class="w-4 h-4 text-gs-secondary"></i>
-                <span class="text-xs font-bold text-gs-primary">בדוק רפואית</span>
+                <span class="text-xs font-bold text-gs-primary">בשפת אנשים</span>
               </div>
             </div>
           </div>
@@ -214,147 +199,403 @@
 
       </div>
 
-      <!-- Scroll indicator -->
       <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none">
-        <span class="text-xs text-white/30 font-medium tracking-widest uppercase">גלול</span>
+        <span class="text-xs text-white/25 tracking-widest uppercase">גלול</span>
         <i data-lucide="chevron-down" class="w-5 h-5 text-white/20 bounce-gentle"></i>
       </div>
     </div>
   </section>
 
-  <!-- Color band divider -->
   <div class="section-wave"></div>
 
-  <!-- ─── How It Works — white ─── -->
-  <section id="how-it-works" class="py-24 bg-white">
+  <!-- ─── Topics ─── -->
+  <section id="topics" class="py-24 bg-white">
     <div class="max-w-6xl mx-auto px-6">
 
       <div class="text-center mb-16">
-        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">התהליך</span>
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">תוכן האתר</span>
         <h2 class="animate-on-scroll text-4xl font-bold tracking-tight text-gs-primary" style="transition-delay:100ms">
-          פשוט. שקוף. שלך.
+          גסטרואנטרולוגיה בגובה העיניים
         </h2>
-        <p class="animate-on-scroll text-lg text-gs-muted mt-4 max-w-lg mx-auto" style="transition-delay:200ms">
-          שלושה שלבים מבלבול לבהירות.
+        <p class="animate-on-scroll text-lg text-gs-muted mt-4 max-w-2xl mx-auto" style="transition-delay:200ms">
+          סרטי הסבר על מצבים שכיחים בגסטרואנטרולוגיה, מחלות המעי הדלקתיות והכנה לבדיקות
         </p>
       </div>
 
-      <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="hidden md:block absolute top-14 right-[36%] left-[36%] border-t-2 border-dashed border-gs-border z-0"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Step 1 -->
-        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-lg transition-all z-10 group" style="transition-delay:0ms">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-14 h-14 bg-gs-secondary rounded-2xl flex items-center justify-center shadow-md group-hover:bg-gs-secondary-dk transition-colors">
-              <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+        <div class="animate-on-scroll group bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:0ms">
+          <div class="flex items-start gap-5 mb-6">
+            <div class="w-16 h-16 bg-gs-primary rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:bg-gs-secondary transition-colors">
+              <i data-lucide="heart-pulse" class="w-8 h-8 text-white"></i>
             </div>
-            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full border border-gs-teal-border">01</span>
+            <div>
+              <h3 class="text-xl font-bold text-gs-primary mb-1">מחלות ותסמינים</h3>
+              <p class="text-sm text-gs-muted">הסברים ברורים על מצבים שכיחים</p>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gs-primary mb-3">שאל את השאלה שלך</h3>
-          <p class="text-gs-muted leading-relaxed text-sm">ללא מינוח רפואי מסובך. ללא קירות של טקסט. רק תשובות בשפה פשוטה על מה שקורה במערכת העיכול שלך.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>תסמונת המעי הרגיש (IBS)</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>צרבת ורפלוקס (GERD)</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>כבד שומני וחיידק ההליקובקטר</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>עצירות, נפיחות, כאבי בטן</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>סרטן המעי הגס ומחלות הסעיפים</li>
+          </ul>
         </div>
 
-        <!-- Step 2 -->
-        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-lg transition-all z-10 group" style="transition-delay:150ms">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-14 h-14 bg-gs-primary rounded-2xl flex items-center justify-center shadow-md group-hover:opacity-90 transition-opacity">
-              <i data-lucide="book-open" class="w-7 h-7 text-white"></i>
+        <div class="animate-on-scroll group bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:100ms">
+          <div class="flex items-start gap-5 mb-6">
+            <div class="w-16 h-16 bg-gs-secondary rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:bg-gs-secondary-dk transition-colors">
+              <i data-lucide="stethoscope" class="w-8 h-8 text-white"></i>
             </div>
-            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full border border-gs-teal-border">02</span>
+            <div>
+              <h3 class="text-xl font-bold text-gs-primary mb-1">בדיקות רפואיות</h3>
+              <p class="text-sm text-gs-muted">הכנה ומה לצפות — בלי הפתעות</p>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gs-primary mb-3">קבל הסבר ברור</h3>
-          <p class="text-gs-muted leading-relaxed text-sm">כל מחלה, בדיקה ותסמין — מוסברים כמו שרופא מהימן היה מסביר לבן משפחה שלו.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>קולונוסקופיה — הכנה מלאה וחשיבות הבדיקה</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>גסטרוסקופיה — מה קורה ומה לצפות</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>סיגמואידוסקופיה ווידאו קפסולה</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>תבחיני נשיפה לאיתור ה.פילורי</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>כריתת פוליפ — מה קורה בבדיקה</li>
+          </ul>
         </div>
 
-        <!-- Step 3 -->
-        <div class="animate-on-scroll relative bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-lg transition-all z-10 group" style="transition-delay:300ms">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-14 h-14 bg-gs-accent rounded-2xl flex items-center justify-center shadow-md group-hover:opacity-90 transition-opacity">
-              <i data-lucide="check-circle-2" class="w-7 h-7 text-white"></i>
+        <div class="animate-on-scroll group bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:200ms">
+          <div class="flex items-start gap-5 mb-6">
+            <div class="w-16 h-16 bg-gs-accent rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:opacity-90 transition-opacity">
+              <i data-lucide="flame" class="w-8 h-8 text-white"></i>
             </div>
-            <span class="bg-gs-teal-tint text-gs-secondary text-xs font-bold px-2.5 py-1 rounded-full border border-gs-teal-border">03</span>
+            <div>
+              <h3 class="text-xl font-bold text-gs-primary mb-1">מחלות המעי הדלקתיות</h3>
+              <p class="text-sm text-gs-muted">קרוהן וקוליטיס — המחלה, הטיפול, החיים</p>
+            </div>
           </div>
-          <h3 class="text-xl font-bold text-gs-primary mb-3">צא בטוח לדרך</h3>
-          <p class="text-gs-muted leading-relaxed text-sm">הגע לתור הבא שלך מוכן, מיודע, ובשליטה על הבריאות שלך.</p>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>מחלת קרוהן — הסבר מקיף ואבחנה</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>קוליטיס כיבית — מה שצריך לדעת</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>הטיפול התרופותי וסטרואידים</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>ספורט, תזונה וניהול חיים תקינים</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>קרוהן, קוליטיס, פרוקטיטיס — מה ההבדל?</li>
+          </ul>
+        </div>
+
+        <div class="animate-on-scroll group bg-gs-bg border border-gs-border rounded-2xl p-8 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:300ms">
+          <div class="flex items-start gap-5 mb-6">
+            <div class="w-16 h-16 bg-gs-primary rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:bg-gs-secondary transition-colors">
+              <i data-lucide="leaf" class="w-8 h-8 text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gs-primary mb-1">המלצות תזונה</h3>
+              <p class="text-sm text-gs-muted">הנחיות מבוססות ראיות, בלי מיתוסים</p>
+            </div>
+          </div>
+          <ul class="space-y-2">
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>דיאטת Low-FODMAP לתסמונת המעי הרגיש</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>תזונה אנטי-דלקתית למחלות המעי</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>ללא גלוטן — מי באמת צריך?</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>תזונה לאחר בדיקות וניתוחים</li>
+            <li class="flex items-center gap-2 text-sm text-gs-body"><i data-lucide="check" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>פרוביוטיקה — מה עובד ומה לא</li>
+          </ul>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ─── Features — teal tint ─── -->
-  <section id="features" class="py-24 bg-gs-teal-tint">
+  <!-- ─── Guides & Preparation ─── -->
+  <section id="guides" class="py-24 bg-gs-teal-tint">
     <div class="max-w-6xl mx-auto px-6">
 
       <div class="text-center mb-16">
-        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">מה תמצאו כאן</span>
-        <h2 class="animate-on-scroll text-4xl font-bold tracking-tight text-gs-primary leading-tight" style="transition-delay:100ms">
-          כל מה שצריך לדעת<br class="hidden sm:block"> על מערכת העיכול
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">הדרכות</span>
+        <h2 class="animate-on-scroll text-4xl font-bold tracking-tight text-gs-primary" style="transition-delay:100ms">
+          הכנה לבדיקות — בלי הפתעות
         </h2>
-        <p class="animate-on-scroll text-lg text-gs-muted mt-4 max-w-xl mx-auto" style="transition-delay:200ms">
-          ממחלות ותסמינים ועד בדיקות ותרופות — התמונה המלאה בשפה שמובנת לכולם.
+        <p class="animate-on-scroll text-lg text-gs-muted mt-4 max-w-2xl mx-auto" style="transition-delay:200ms">
+          סרטוני הסבר מפורטים, הוראות הכנה לפי קופת חולים, וכלי AI לסיוע אישי
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Video guides grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
 
-        <!-- F1 -->
-        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:0ms">
-          <div class="w-12 h-12 bg-gs-primary rounded-xl flex items-center justify-center mb-4">
-            <i data-lucide="library" class="w-6 h-6 text-white"></i>
+        <div class="animate-on-scroll bg-white rounded-xl p-5 border border-gs-teal-border hover:border-gs-secondary hover:shadow-lg transition-all group" style="transition-delay:0ms">
+          <div class="w-12 h-12 bg-gs-primary rounded-xl flex items-center justify-center mb-4 group-hover:bg-gs-secondary transition-colors">
+            <i data-lucide="play-circle" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-bold text-gs-primary mb-2">מאגר מחלות ותסמונות</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">IBS, קרוהן, קוליטיס, GERD, צליאק ועוד עשרות מחלות — מוסברות בבהירות עם תסמינים, גורמים ומה לצפות.</p>
+          <h3 class="font-bold text-gs-primary text-sm mb-1">קולונוסקופיה</h3>
+          <p class="text-xs text-gs-muted">הכנה עם פיקולקס, מוביפרף ומרוקן</p>
         </div>
 
-        <!-- F2 -->
-        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:100ms">
-          <div class="w-12 h-12 bg-gs-secondary rounded-xl flex items-center justify-center mb-4">
-            <i data-lucide="stethoscope" class="w-6 h-6 text-white"></i>
+        <div class="animate-on-scroll bg-white rounded-xl p-5 border border-gs-teal-border hover:border-gs-secondary hover:shadow-lg transition-all group" style="transition-delay:80ms">
+          <div class="w-12 h-12 bg-gs-secondary rounded-xl flex items-center justify-center mb-4 group-hover:bg-gs-secondary-dk transition-colors">
+            <i data-lucide="play-circle" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-bold text-gs-primary mb-2">מדריך לבדיקות ופרוצדורות</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">הכנה לקולונוסקופיה, גסטרוסקופיה ועוד — מה קורה לפני, במהלך ואחרי הבדיקה, בלי הפתעות.</p>
+          <h3 class="font-bold text-gs-primary text-sm mb-1">גסטרוסקופיה</h3>
+          <p class="text-xs text-gs-muted">מה קורה לפני, במהלך ואחרי</p>
         </div>
 
-        <!-- F3 -->
-        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:200ms">
-          <div class="w-12 h-12 bg-gs-accent rounded-xl flex items-center justify-center mb-4">
-            <i data-lucide="search" class="w-6 h-6 text-white"></i>
+        <div class="animate-on-scroll bg-white rounded-xl p-5 border border-gs-teal-border hover:border-gs-secondary hover:shadow-lg transition-all group" style="transition-delay:160ms">
+          <div class="w-12 h-12 bg-gs-accent rounded-xl flex items-center justify-center mb-4 group-hover:opacity-90 transition-opacity">
+            <i data-lucide="play-circle" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-bold text-gs-primary mb-2">פענוח תסמינים</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">נפיחות, כאבי בטן, שינויים ביציאות — הבנת מה הגוף שלך אומר, בלי סחרחורת מ-Google.</p>
+          <h3 class="font-bold text-gs-primary text-sm mb-1">כריתת פוליפ</h3>
+          <p class="text-xs text-gs-muted">מה קורה בקולונוסקופיה</p>
         </div>
 
-        <!-- F4 -->
-        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:300ms">
-          <div class="w-12 h-12 bg-gs-primary rounded-xl flex items-center justify-center mb-4">
-            <i data-lucide="pill" class="w-6 h-6 text-white"></i>
+        <div class="animate-on-scroll bg-white rounded-xl p-5 border border-gs-teal-border hover:border-gs-secondary hover:shadow-lg transition-all group" style="transition-delay:240ms">
+          <div class="w-12 h-12 bg-gs-primary rounded-xl flex items-center justify-center mb-4 group-hover:bg-gs-secondary transition-colors">
+            <i data-lucide="play-circle" class="w-6 h-6 text-white"></i>
           </div>
-          <h3 class="text-base font-bold text-gs-primary mb-2">מדריך תרופות</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">מה כל תרופה עושה, תופעות לוואי נפוצות, ושאלות ששווה לשאול את הרופא או הרוקח.</p>
+          <h3 class="font-bold text-gs-primary text-sm mb-1">סיגמואידוסקופיה</h3>
+          <p class="text-xs text-gs-muted">הכנה לבדיקה ומניעת סרטן המעי</p>
         </div>
 
-        <!-- F5 -->
-        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl p-6 hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:400ms">
-          <div class="w-12 h-12 bg-gs-secondary rounded-xl flex items-center justify-center mb-4">
-            <i data-lucide="leaf" class="w-6 h-6 text-white"></i>
-          </div>
-          <h3 class="text-base font-bold text-gs-primary mb-2">תזונה ידידותית לעיכול</h3>
-          <p class="text-sm text-gs-muted leading-relaxed">דיאטת Low-FODMAP, ללא גלוטן, אנטי-דלקתית — הנחיות מעשיות ומבוססות ראיות, בלי מיתוסים.</p>
-        </div>
+      </div>
 
-        <!-- F6 — CTA card -->
-        <div class="animate-on-scroll bg-gs-primary rounded-xl p-6 hover:opacity-95 hover:shadow-xl transition-all flex flex-col justify-between" style="transition-delay:500ms">
-          <div>
-            <div class="w-12 h-12 bg-white/15 border border-white/25 rounded-xl flex items-center justify-center mb-4">
-              <i data-lucide="help-circle" class="w-6 h-6 text-gs-accent"></i>
+      <!-- Instructions by HMO + AI bot -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Clalit -->
+        <div class="animate-on-scroll bg-white rounded-2xl p-7 border border-gs-teal-border hover:border-gs-secondary hover:shadow-lg transition-all" style="transition-delay:0ms">
+          <div class="flex items-center gap-2 mb-5">
+            <div class="w-8 h-8 bg-gs-secondary/15 rounded-lg flex items-center justify-center">
+              <i data-lucide="file-text" class="w-4 h-4 text-gs-secondary"></i>
             </div>
-            <h3 class="text-base font-bold text-white mb-2">עדיין יש לך שאלות?</h3>
-            <p class="text-sm text-white/70 leading-relaxed mb-6">לא מצאת מה שחיפשת? שלח שאלה ונוסיף אותה למאגר.</p>
+            <h3 class="font-bold text-gs-primary">הוראות הכנה — כללית</h3>
           </div>
-          <a href="#about" class="inline-flex items-center gap-2 bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors self-start">
-            שאל שאלה
-            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          <ul class="space-y-2.5 text-sm text-gs-body">
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הוראות הכנה פיקולקס כללית</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הוראות הכנה מוביפרף כללית</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הוראות הכנה מרוקן כללית</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הכנה לגסטרוסקופיה כללית</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הכנה לסיגמואידוסקופיה כללית</li>
+          </ul>
+        </div>
+
+        <!-- Maccabi -->
+        <div class="animate-on-scroll bg-white rounded-2xl p-7 border border-gs-teal-border hover:border-gs-secondary hover:shadow-lg transition-all" style="transition-delay:100ms">
+          <div class="flex items-center gap-2 mb-5">
+            <div class="w-8 h-8 bg-gs-primary/10 rounded-lg flex items-center justify-center">
+              <i data-lucide="file-text" class="w-4 h-4 text-gs-primary"></i>
+            </div>
+            <h3 class="font-bold text-gs-primary">הוראות הכנה — מכבי</h3>
+          </div>
+          <ul class="space-y-2.5 text-sm text-gs-body">
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הוראות הכנה פיקולקס מכבי</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הוראות הכנה מוביפרף מכבי</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הוראות הכנה מרוקן מכבי</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הכנה לחולי סוכרת לקולונוסקופיה</li>
+            <li class="flex items-center gap-2"><i data-lucide="chevron-left" class="w-3 h-3 text-gs-secondary flex-shrink-0"></i>הכנה לנוטלי מדללי דם</li>
+          </ul>
+        </div>
+
+        <!-- AI Bot -->
+        <div class="animate-on-scroll bg-gs-primary rounded-2xl p-7 hover:opacity-95 transition-all" style="transition-delay:200ms">
+          <div class="w-12 h-12 bg-white/15 border border-white/25 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="bot" class="w-6 h-6 text-gs-accent"></i>
+          </div>
+          <h3 class="font-bold text-white text-lg mb-2">בוט הכנה חכמה</h3>
+          <p class="text-white/65 text-sm leading-relaxed mb-6">
+            כלי עזר מבוסס AI הנועד לעזור לך להתכונן בצורה מיטבית ולענות על שאלות הקשורות להכנה לבדיקה.
+          </p>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2 text-xs text-white/60">
+              <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-gs-accent"></i>הכנה מותאמת אישית
+            </div>
+            <div class="flex items-center gap-2 text-xs text-white/60">
+              <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-gs-accent"></i>מענה על שאלות בזמן אמת
+            </div>
+            <div class="flex items-center gap-2 text-xs text-white/60">
+              <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-gs-accent"></i>זמין 24/7
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Consent forms + special prep strip -->
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl px-5 py-4 flex items-center gap-3 hover:border-gs-secondary transition-colors" style="transition-delay:0ms">
+          <i data-lucide="file-check" class="w-5 h-5 text-gs-secondary flex-shrink-0"></i>
+          <span class="text-sm font-semibold text-gs-primary">טופס הסכמה — עברית</span>
+        </div>
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl px-5 py-4 flex items-center gap-3 hover:border-gs-secondary transition-colors" style="transition-delay:80ms">
+          <i data-lucide="file-check" class="w-5 h-5 text-gs-secondary flex-shrink-0"></i>
+          <span class="text-sm font-semibold text-gs-primary">טופס הסכמה — רוסית</span>
+        </div>
+        <div class="animate-on-scroll bg-white border border-gs-teal-border rounded-xl px-5 py-4 flex items-center gap-3 hover:border-gs-secondary transition-colors" style="transition-delay:160ms">
+          <i data-lucide="file-check" class="w-5 h-5 text-gs-secondary flex-shrink-0"></i>
+          <span class="text-sm font-semibold text-gs-primary">טופס הסכמה — אנגלית</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-wave"></div>
+
+  <!-- ─── About Doctor ─── -->
+  <section id="about" class="py-24 bg-gs-warm">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">אודות</span>
+        <h2 class="animate-on-scroll text-4xl font-bold tracking-tight text-gs-primary" style="transition-delay:100ms">
+          ד״ר איל שחר
+        </h2>
+        <p class="animate-on-scroll text-lg text-gs-muted mt-3 max-w-xl mx-auto" style="transition-delay:200ms">
+          מומחה גסטרואנטרולוגיה ומחלות כבד
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <!-- Bio card -->
+        <div class="animate-slide-right">
+          <div class="bg-gs-primary rounded-2xl p-8 text-white mb-6">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-full bg-gs-secondary/25 border-2 border-gs-secondary flex items-center justify-center flex-shrink-0">
+                <i data-lucide="user" class="w-8 h-8 text-gs-accent"></i>
+              </div>
+              <div>
+                <p class="font-bold text-xl">ד״ר איל שחר</p>
+                <p class="text-white/55 text-sm mt-0.5">מומחה גסטרואנטרולוגיה ומחלות כבד</p>
+              </div>
+            </div>
+            <p class="text-white/75 text-sm leading-relaxed mb-6">
+              עוסק במחלות דרכי העיכול, מבצע בדיקות אנדוסקופיות של מערכת העיכול — קולונוסקופיה, גסטרוסקופיה וסיגמואידוסקופיה. תחומי עיסוק עיקריים: גילוי מוקדם של סרטן המעי הגס, מחלות מעי דלקתיות (קרוהן, קוליטיס כיבית).
+            </p>
+            <div class="space-y-3 text-sm">
+              <div class="flex items-start gap-3">
+                <i data-lucide="building-2" class="w-4 h-4 text-gs-accent mt-0.5 flex-shrink-0"></i>
+                <span class="text-white/75">רופא מומחה בכיר — מרכז רפואי שיבא תל השומר, מכבי שירותי בריאות, שירותי בריאות כללית, אסותא</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-gs-accent mt-0.5 flex-shrink-0"></i>
+                <span class="text-white/75">אחראי תוכנית ההתמחות בגסטרואנטרולוגיה, בית החולים שיבא תל השומר</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="globe" class="w-4 h-4 text-gs-accent mt-0.5 flex-shrink-0"></i>
+                <span class="text-white/75">נציג ישראל בוועד UEG — United European Gastroenterology (מינואר 2020)</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <i data-lucide="users" class="w-4 h-4 text-gs-accent mt-0.5 flex-shrink-0"></i>
+                <span class="text-white/75">לשעבר חבר וגזבר הוועד המנהל, האיגוד הישראלי לגסטרואנטרולוגיה ומחלות הכבד (2016–2020)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional associations -->
+          <div class="bg-white border border-gs-warm-border rounded-2xl p-6">
+            <h4 class="font-bold text-gs-primary mb-4 text-sm uppercase tracking-wide">חברות באיגודים מקצועיים</h4>
+            <div class="space-y-2.5 text-sm text-gs-body">
+              <div class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>האיגוד הישראלי לגסטרואנטרולוגיה ומחלות כבד</div>
+              <div class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>החברה הישראלית לחקר הכבד</div>
+              <div class="flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-gs-secondary flex-shrink-0"></i>United European Gastroenterology (UEG)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CV timeline -->
+        <div class="animate-slide-left">
+
+          <!-- Education -->
+          <div class="mb-8">
+            <h4 class="font-bold text-gs-primary mb-4 flex items-center gap-2">
+              <div class="w-7 h-7 bg-gs-secondary rounded-lg flex items-center justify-center">
+                <i data-lucide="graduation-cap" class="w-4 h-4 text-white"></i>
+              </div>
+              השכלה
+            </h4>
+            <div class="space-y-3 border-r-2 border-gs-border pr-4">
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">1986–1991</span><p class="text-gs-body mt-0.5">בית הספר לרפואה, האוניברסיטה העברית בירושלים — M.D</p></div>
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2001</span><p class="text-gs-body mt-0.5">מומחה ברפואה פנימית</p></div>
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2003–2004</span><p class="text-gs-body mt-0.5">אוניברסיטת בן גוריון — M.H.A, מנהל מערכות בריאות</p></div>
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2006</span><p class="text-gs-body mt-0.5">מומחה בגסטרואנטרולוגיה ומחלות כבד</p></div>
+            </div>
+          </div>
+
+          <!-- Career highlights -->
+          <div>
+            <h4 class="font-bold text-gs-primary mb-4 flex items-center gap-2">
+              <div class="w-7 h-7 bg-gs-primary rounded-lg flex items-center justify-center">
+                <i data-lucide="briefcase" class="w-4 h-4 text-white"></i>
+              </div>
+              ניסיון קליני — תחנות עיקריות
+            </h4>
+            <div class="space-y-3 border-r-2 border-gs-border pr-4">
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2003–2006</span><p class="text-gs-body mt-0.5">התמחות גסטרואנטרולוגיה, המרכז הרפואי אסף הרופא</p></div>
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2008–2011</span><p class="text-gs-body mt-0.5">ראש תחום גסטרואנטרולוגיה וכבד, חיל הרפואה, צה"ל</p></div>
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2012–2019</span><p class="text-gs-body mt-0.5">רופא מומחה בכיר, המרכז הרפואי אסף הרופא</p></div>
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2012–היום</span><p class="text-gs-body mt-0.5">מומחה גסטרואנטרולוגיה, קופת חולים כללית — בת ימין | מנהל שרות טיפול במחלות מעי דלקתיות</p></div>
+              <div class="text-sm"><span class="text-gs-secondary font-bold text-xs">2019–היום</span><p class="text-gs-body mt-0.5 font-semibold text-gs-primary">רופא מומחה בכיר, המכון לגסטרואנטרולוגיה, המרכז הרפואי שיבא תל השומר | אחראי תוכנית ההתמחות</p></div>
+            </div>
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="mt-8 p-4 bg-white border border-gs-warm-border rounded-xl">
+            <p class="text-xs text-gs-muted leading-relaxed">
+              <span class="font-semibold text-gs-body">הערה חשובה:</span> כל התכנים באתר נועדו להעשרת ידע בלבד ואינם תחליף לייעוץ רפואי, אבחון או טיפול. בכל מקרה של שאלה או חשד לבעיה רפואית — יש לפנות לרופא המטפל.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ─── -->
+  <section id="contact" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-14">
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">קביעת תור</span>
+        <h2 class="animate-on-scroll text-4xl font-bold tracking-tight text-gs-primary" style="transition-delay:100ms">
+          לקביעת פגישה
+        </h2>
+        <p class="animate-on-scroll text-lg text-gs-muted mt-3 max-w-lg mx-auto" style="transition-delay:200ms">
+          ד״ר איל שחר מקבל מטופלים בשלושה מרכזים רפואיים
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="animate-on-scroll bg-gs-bg rounded-2xl p-7 border border-gs-border hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:0ms">
+          <div class="w-12 h-12 bg-gs-secondary rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+          </div>
+          <p class="text-xs font-bold uppercase tracking-widest text-gs-secondary mb-2">מכבי שירותי בריאות</p>
+          <h3 class="text-lg font-bold text-gs-primary mb-2">ראשון לציון</h3>
+          <p class="text-sm text-gs-body">רח׳ שריה שמואל 3</p>
+          <a href="tel:039400055" class="flex items-center gap-2 text-gs-secondary font-bold text-lg mt-4 hover:text-gs-secondary-dk transition-colors" dir="ltr">
+            <i data-lucide="phone" class="w-5 h-5"></i>03-9400055
+          </a>
+        </div>
+
+        <div class="animate-on-scroll bg-gs-bg rounded-2xl p-7 border border-gs-border hover:border-gs-secondary hover:shadow-xl transition-all" style="transition-delay:100ms">
+          <div class="w-12 h-12 bg-gs-primary rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+          </div>
+          <p class="text-xs font-bold uppercase tracking-widest text-gs-secondary mb-2">שירותי בריאות כללית</p>
+          <h3 class="text-lg font-bold text-gs-primary mb-2">בת ים</h3>
+          <p class="text-sm text-gs-body">המכון לגסטרואנטרולוגיה, מרכז רפואי בת ים</p>
+          <a href="tel:035556555" class="flex items-center gap-2 text-gs-secondary font-bold text-lg mt-4 hover:text-gs-secondary-dk transition-colors" dir="ltr">
+            <i data-lucide="phone" class="w-5 h-5"></i>03-5556555
+          </a>
+        </div>
+
+        <div class="animate-on-scroll bg-gs-primary rounded-2xl p-7 hover:shadow-xl transition-all" style="transition-delay:200ms">
+          <div class="w-12 h-12 bg-white/15 border border-white/25 rounded-xl flex items-center justify-center mb-5">
+            <i data-lucide="building-2" class="w-6 h-6 text-gs-accent"></i>
+          </div>
+          <p class="text-xs font-bold uppercase tracking-widest text-gs-accent mb-2">בית חולים</p>
+          <h3 class="text-lg font-bold text-white mb-2">המרכז הרפואי שיבא</h3>
+          <p class="text-sm text-white/60">המכון לגסטרואנטרולוגיה, תל השומר</p>
+          <a href="tel:035302694" class="flex items-center gap-2 text-gs-accent font-bold text-lg mt-4 hover:text-white transition-colors" dir="ltr">
+            <i data-lucide="phone" class="w-5 h-5"></i>03-5302694
           </a>
         </div>
 
@@ -362,140 +603,37 @@
     </div>
   </section>
 
-  <!-- ─── About — warm cream ─── -->
-  <section id="about" class="py-24 bg-gs-warm">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-
-        <!-- Right (RTL = text) -->
-        <div class="animate-slide-right">
-          <span class="inline-block text-xs font-semibold uppercase tracking-widest text-gs-secondary mb-4">אודות האתר</span>
-          <h2 class="text-4xl font-bold tracking-tight text-gs-primary mb-6 leading-tight">
-            רפואה לא צריכה<br>להיות מסובכת
-          </h2>
-          <div class="space-y-4">
-            <p class="text-gs-body leading-relaxed">
-              יותר מדי מטופלים יוצאים מהתייעצות עם יותר שאלות מאשר תשובות. המידע הרפואי ברשת הוא לרוב פשטני מדי — או טכני מדי. GutSimple נבנה כדי לגשר על הפער הזה.
-            </p>
-            <p class="text-gs-body leading-relaxed">
-              אנחנו מאמינים שמטופל מיודע הוא מטופל בריא יותר. כשמבינים מה קורה בגוף, שואלים שאלות טובות יותר, ממלאים אחר הטיפול — ומרגישים פחות חרדה.
-            </p>
-            <p class="text-gs-body leading-relaxed">
-              התכנים נכתבים על ידי אנשי מקצוע בגסטרואנטרולוגיה ומועברים לשפה שכולם מבינים — כי "גסטרופרזיס" צריך יותר מהגדרה מילונית.
-            </p>
-          </div>
-
-          <!-- Trust badges -->
-          <div class="animate-fade flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-gs-warm-border" style="transition-delay:300ms">
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 bg-gs-secondary rounded-lg flex items-center justify-center">
-                <i data-lucide="shield-check" class="w-4 h-4 text-white"></i>
-              </div>
-              <span class="text-sm text-gs-body font-semibold">בדוק רפואית</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 bg-gs-primary rounded-lg flex items-center justify-center">
-                <i data-lucide="users" class="w-4 h-4 text-white"></i>
-              </div>
-              <span class="text-sm text-gs-body font-semibold">שפת מטופלים</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <div class="w-8 h-8 bg-gs-accent rounded-lg flex items-center justify-center">
-                <i data-lucide="globe" class="w-4 h-4 text-white"></i>
-              </div>
-              <span class="text-sm text-gs-body font-semibold">עברית ואנגלית</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Left (RTL = testimonial) -->
-        <div class="animate-slide-left" style="transition-delay:200ms">
-          <!-- Doctor card -->
-          <div class="relative mb-6">
-            <div class="bg-gs-primary rounded-2xl p-7 text-white">
-              <div class="flex items-center gap-4 mb-5">
-                <div class="w-14 h-14 rounded-full bg-gs-secondary/30 border-2 border-gs-secondary flex items-center justify-center flex-shrink-0">
-                  <i data-lucide="user" class="w-7 h-7 text-gs-accent"></i>
-                </div>
-                <div>
-                  <p class="font-bold text-lg">ד״ר שחר איל</p>
-                  <p class="text-white/60 text-sm">מומחה גסטרואנטרולוגיה</p>
-                </div>
-              </div>
-              <p class="text-white/80 leading-relaxed text-sm italic">
-                "המטרה שלי היא שכל מטופל יצא מהתור שלנו עם תחושת שליטה — לא בלבול. GutSimple הוא הדרך להמשיך את השיחה גם מחוץ לקליניקה."
-              </p>
-            </div>
-          </div>
-
-          <!-- Testimonial card -->
-          <div class="relative">
-            <div class="absolute inset-0 bg-white border border-gs-warm-border rounded-2xl -z-10" style="transform: rotate(-1deg);"></div>
-            <div class="relative bg-white border border-gs-teal-border rounded-2xl p-7" style="transform: rotate(0.8deg);">
-              <div class="text-5xl font-serif leading-none mb-3 select-none" style="color:#2FA4A9">"</div>
-              <p class="text-lg text-gs-primary font-semibold leading-relaxed mb-5">
-                בפעם הראשונה הבנתי מה הרופא שלי אמר לי.
-              </p>
-              <div class="flex items-center justify-between">
-                <div>
-                  <p class="text-sm font-bold text-gs-primary">שרה מ.</p>
-                  <p class="text-xs text-gs-muted">מטופלת, תל אביב</p>
-                </div>
-                <div class="flex items-center gap-0.5">
-                  <svg class="w-4 h-4" fill="#2FA4A9" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-4 h-4" fill="#2FA4A9" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-4 h-4" fill="#2FA4A9" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-4 h-4" fill="#2FA4A9" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-4 h-4" fill="#2FA4A9" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Color band divider -->
-  <div class="section-wave"></div>
-
-  <!-- ─── Footer — navy ─── -->
-  <footer class="bg-gs-primary text-white/60">
+  <!-- ─── Footer ─── -->
+  <footer class="bg-gs-primary text-white/55">
     <div class="max-w-6xl mx-auto px-6 py-12">
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-8">
-        <!-- Logo -->
         <div class="flex items-center gap-2">
           <i data-lucide="activity" class="w-5 h-5 text-gs-accent"></i>
           <span class="font-bold text-white text-lg tracking-tight">GutSimple</span>
         </div>
-        <!-- Nav -->
         <nav class="flex items-center gap-6 justify-center flex-wrap">
-          <a href="#how-it-works" class="text-sm hover:text-white transition-colors">איך זה עובד</a>
-          <a href="#features"     class="text-sm hover:text-white transition-colors">נושאים</a>
-          <a href="#about"        class="text-sm hover:text-white transition-colors">אודות</a>
-          <a href="#about"        class="text-sm hover:text-white transition-colors">צור קשר</a>
+          <a href="#topics"  class="text-sm hover:text-white transition-colors">נושאים</a>
+          <a href="#guides"  class="text-sm hover:text-white transition-colors">הדרכות</a>
+          <a href="#about"   class="text-sm hover:text-white transition-colors">אודות</a>
+          <a href="#contact" class="text-sm hover:text-white transition-colors">קביעת תור</a>
         </nav>
-        <!-- CTA -->
         <div class="flex md:justify-start">
-          <a href="#features" class="bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-bold px-5 py-2 rounded-lg transition-colors">
-            שאל שאלה
+          <a href="#contact" class="bg-gs-secondary hover:bg-gs-secondary-dk text-white text-sm font-bold px-5 py-2 rounded-lg transition-colors">
+            לקביעת תור
           </a>
         </div>
       </div>
 
-      <!-- Taglines divider -->
       <div class="text-center py-5 border-y border-white/10 space-y-1">
-        <p class="text-white/50 text-sm" dir="rtl" lang="he">גסטרואנטרולוגיה בגובה העיניים</p>
-        <p class="text-white/25 text-xs tracking-wide" dir="ltr">Clear Answers. Trusted Gastroenterology.</p>
+        <p class="text-white/45 text-sm">גסטרואנטרולוגיה בגובה העיניים</p>
+        <p class="text-white/20 text-xs tracking-wide" dir="ltr">Clear Answers. Trusted Gastroenterology.</p>
       </div>
 
-      <!-- Bottom -->
       <div class="flex flex-col md:flex-row items-center justify-between gap-4 mt-8">
-        <p class="text-sm">© 2026 GutSimple. כל הזכויות שמורות.</p>
-        <p class="text-xs text-white/30 text-center md:text-right max-w-sm">
-          אין לראות באתר זה תחליף לייעוץ רפואי מקצועי. יש להתייעץ עם רופא.
+        <p class="text-sm">© 2026 GutSimple · ד״ר איל שחר. כל הזכויות שמורות.</p>
+        <p class="text-xs text-white/25 text-center md:text-right max-w-sm">
+          כל התכנים נועדו להעשרת ידע בלבד ואינם תחליף לייעוץ רפואי מקצועי. בכל חשד לבעיה רפואית — פנה לרופא המטפל.
         </p>
       </div>
 
@@ -512,7 +650,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.animate-on-scroll, .animate-fade, .animate-slide-left, .animate-slide-right')
       .forEach(el => observer.observe(el));
