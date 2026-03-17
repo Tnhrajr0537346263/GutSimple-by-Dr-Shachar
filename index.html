@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GutSimple — Clear Answers. Trusted Gastroenterology.</title>
+  <meta name="description" content="Understanding your gut, one simple explanation at a time. Patient-first gastroenterology information in plain language.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;1,14..32,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+
+    /* Scroll animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .animate-fade {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+    .animate-fade.is-visible { opacity: 1; }
+
+    .animate-slide-left {
+      opacity: 0;
+      transform: translateX(-32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .animate-slide-left.is-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .animate-slide-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .animate-slide-right.is-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* Gentle bounce for scroll indicator */
+    @keyframes bounce-gentle {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(7px); }
+    }
+    .bounce-gentle { animation: bounce-gentle 2.2s ease-in-out infinite; }
+
+    /* Dot grid background texture */
+    .dot-grid {
+      background-image: radial-gradient(circle, #d6d3d1 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* Fill utility for star icons */
+    .fill-amber { fill: #fbbf24; }
+  </style>
+</head>
+<body class="bg-white text-stone-900 antialiased">
+
+  <!-- ─── Navigation ─── -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-stone-100 transition-shadow duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="activity" class="w-5 h-5 text-amber-500"></i>
+        <span class="font-bold text-stone-900 text-lg tracking-tight">GutSimple</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#how-it-works" class="text-sm text-stone-500 hover:text-stone-900 transition-colors">How It Works</a>
+        <a href="#features" class="text-sm text-stone-500 hover:text-stone-900 transition-colors">Features</a>
+        <a href="#about" class="text-sm text-stone-500 hover:text-stone-900 transition-colors">About</a>
+      </div>
+      <a href="#features" class="bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+        Get Started
+      </a>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─── -->
+  <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <!-- Background texture -->
+    <div class="absolute inset-0 dot-grid opacity-30"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-stone-50/90"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 py-24 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Copy -->
+        <div>
+          <div class="animate-fade" style="transition-delay:0ms">
+            <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-full mb-8">
+              Patient-First Gastroenterology
+            </span>
+          </div>
+
+          <h1 class="animate-on-scroll text-6xl md:text-7xl font-bold tracking-tight text-stone-900 leading-none mb-6" style="transition-delay:100ms">
+            Gut<span class="underline decoration-amber-400 decoration-4 underline-offset-8">Simple</span>
+          </h1>
+
+          <p class="animate-on-scroll text-2xl font-medium text-stone-600 mb-4 leading-snug" style="transition-delay:200ms">
+            Clear Answers. Trusted Gastroenterology.
+          </p>
+
+          <p class="animate-on-scroll text-lg text-stone-500 mb-10 leading-relaxed max-w-lg" style="transition-delay:300ms">
+            Understanding your gut, one simple explanation at a time.
+          </p>
+
+          <div class="animate-on-scroll flex flex-col sm:flex-row items-start sm:items-center gap-4" style="transition-delay:400ms">
+            <a href="#how-it-works"
+               class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-2xl font-semibold text-base transition-all shadow-sm hover:shadow-md">
+              <span dir="rtl" lang="he">גסטרואנטרולוגיה בגובה העיניים</span>
+            </a>
+            <a href="#how-it-works"
+               class="text-amber-600 hover:text-amber-700 font-medium text-sm flex items-center gap-1.5 hover:underline underline-offset-4 transition-colors">
+              Learn how it works
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <p class="animate-fade text-sm text-stone-400 mt-3" style="transition-delay:500ms">
+            Gastroenterology at eye level
+          </p>
+        </div>
+
+        <!-- Right: Visual card -->
+        <div class="animate-slide-right hidden lg:flex justify-center" style="transition-delay:250ms">
+          <div class="relative">
+            <!-- Main card -->
+            <div class="bg-white border border-stone-200 rounded-2xl p-8 shadow-sm w-80">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center">
+                  <i data-lucide="activity" class="w-5 h-5 text-amber-500"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-stone-900">Digestive Health</p>
+                  <p class="text-xs text-stone-400">Explained simply</p>
+                </div>
+              </div>
+              <div class="space-y-2.5">
+                <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-xl">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+                  <span class="text-sm text-stone-600">IBS &amp; Crohn's explained</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-xl">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+                  <span class="text-sm text-stone-600">Colonoscopy prep guide</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-xl">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+                  <span class="text-sm text-stone-600">Symptom decoder</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-stone-50 rounded-xl">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-500 flex-shrink-0"></i>
+                  <span class="text-sm text-stone-600">Medication guidance</span>
+                </div>
+              </div>
+            </div>
+            <!-- Floating label -->
+            <div class="absolute -top-4 -right-4 bg-amber-500 text-white text-xs font-semibold px-3 py-1.5 rounded-xl shadow-sm">
+              In plain language
+            </div>
+            <!-- Floating badge -->
+            <div class="absolute -bottom-4 -left-4 bg-white border border-stone-200 rounded-xl p-3 shadow-sm">
+              <div class="flex items-center gap-2">
+                <i data-lucide="users" class="w-4 h-4 text-amber-500"></i>
+                <span class="text-xs font-semibold text-stone-700">Patient-first</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 pointer-events-none">
+        <span class="text-xs text-stone-400 font-medium tracking-widest uppercase">Scroll</span>
+        <i data-lucide="chevron-down" class="w-5 h-5 text-stone-300 bounce-gentle"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── How It Works ─── -->
+  <section id="how-it-works" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">The Process</span>
+        <h2 class="animate-on-scroll text-4xl font-semibold tracking-tight text-stone-900" style="transition-delay:100ms">
+          Simple. Transparent. Yours.
+        </h2>
+        <p class="animate-on-scroll text-lg text-stone-500 mt-4 max-w-lg mx-auto" style="transition-delay:200ms">
+          Three steps from confusion to clarity.
+        </p>
+      </div>
+
+      <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Dashed connector (desktop) -->
+        <div class="hidden md:block absolute top-14 left-[36%] right-[36%] border-t-2 border-dashed border-stone-200 z-0"></div>
+
+        <!-- Step 1 -->
+        <div class="animate-on-scroll relative bg-stone-50 border border-stone-200 rounded-2xl p-8 hover:border-amber-300 hover:shadow-md transition-all z-10" style="transition-delay:0ms">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-white border border-stone-200 rounded-xl flex items-center justify-center shadow-sm">
+              <i data-lucide="message-circle" class="w-6 h-6 text-amber-500"></i>
+            </div>
+            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-full">01</span>
+          </div>
+          <h3 class="text-xl font-semibold text-stone-900 mb-3">Ask Your Question</h3>
+          <p class="text-stone-500 leading-relaxed text-sm">No medical jargon. No intimidating walls of text. Just plain language answers about what's happening in your digestive system.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="animate-on-scroll relative bg-stone-50 border border-stone-200 rounded-2xl p-8 hover:border-amber-300 hover:shadow-md transition-all z-10" style="transition-delay:150ms">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-white border border-stone-200 rounded-xl flex items-center justify-center shadow-sm">
+              <i data-lucide="book-open" class="w-6 h-6 text-amber-500"></i>
+            </div>
+            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-full">02</span>
+          </div>
+          <h3 class="text-xl font-semibold text-stone-900 mb-3">Get Clear Explanations</h3>
+          <p class="text-stone-500 leading-relaxed text-sm">Every condition, procedure, and symptom — explained the way a trusted doctor would explain it to a family member.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="animate-on-scroll relative bg-stone-50 border border-stone-200 rounded-2xl p-8 hover:border-amber-300 hover:shadow-md transition-all z-10" style="transition-delay:300ms">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-white border border-stone-200 rounded-xl flex items-center justify-center shadow-sm">
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-amber-500"></i>
+            </div>
+            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-full">03</span>
+          </div>
+          <h3 class="text-xl font-semibold text-stone-900 mb-3">Feel Confident</h3>
+          <p class="text-stone-500 leading-relaxed text-sm">Walk into your next appointment informed, prepared, and in control of your own care.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Features ─── -->
+  <section id="features" class="py-24 bg-stone-50">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <span class="animate-fade inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">What We Offer</span>
+        <h2 class="animate-on-scroll text-4xl font-semibold tracking-tight text-stone-900 leading-tight" style="transition-delay:100ms">
+          Everything You Need to Know<br class="hidden sm:block"> About Your Gut
+        </h2>
+        <p class="animate-on-scroll text-lg text-stone-500 mt-4 max-w-xl mx-auto" style="transition-delay:200ms">
+          From symptoms to treatments — the full picture in language that makes sense.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- F1 -->
+        <div class="animate-on-scroll bg-white border border-stone-200 rounded-xl p-6 hover:border-amber-300 hover:shadow-lg transition-all" style="transition-delay:0ms">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="library" class="w-5 h-5 text-amber-500"></i>
+          </div>
+          <h3 class="text-base font-semibold text-stone-900 mb-2">Condition Library</h3>
+          <p class="text-sm text-stone-500 leading-relaxed">IBS, Crohn's, GERD, celiac, and dozens more — explained clearly with symptoms, causes, and what to expect.</p>
+        </div>
+
+        <!-- F2 -->
+        <div class="animate-on-scroll bg-white border border-stone-200 rounded-xl p-6 hover:border-amber-300 hover:shadow-lg transition-all" style="transition-delay:100ms">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="stethoscope" class="w-5 h-5 text-amber-500"></i>
+          </div>
+          <h3 class="text-base font-semibold text-stone-900 mb-2">Procedure Guides</h3>
+          <p class="text-sm text-stone-500 leading-relaxed">Colonoscopy prep demystified. Endoscopy explained. Know what happens before, during, and after.</p>
+        </div>
+
+        <!-- F3 -->
+        <div class="animate-on-scroll bg-white border border-stone-200 rounded-xl p-6 hover:border-amber-300 hover:shadow-lg transition-all" style="transition-delay:200ms">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="search" class="w-5 h-5 text-amber-500"></i>
+          </div>
+          <h3 class="text-base font-semibold text-stone-900 mb-2">Symptom Decoder</h3>
+          <p class="text-sm text-stone-500 leading-relaxed">Bloating, pain, changes in stool — understand what your body might be signaling without a Google spiral.</p>
+        </div>
+
+        <!-- F4 -->
+        <div class="animate-on-scroll bg-white border border-stone-200 rounded-xl p-6 hover:border-amber-300 hover:shadow-lg transition-all" style="transition-delay:300ms">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="pill" class="w-5 h-5 text-amber-500"></i>
+          </div>
+          <h3 class="text-base font-semibold text-stone-900 mb-2">Medication Index</h3>
+          <p class="text-sm text-stone-500 leading-relaxed">What each drug does, common side effects, and questions worth asking your pharmacist or specialist.</p>
+        </div>
+
+        <!-- F5 -->
+        <div class="animate-on-scroll bg-white border border-stone-200 rounded-xl p-6 hover:border-amber-300 hover:shadow-lg transition-all" style="transition-delay:400ms">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="leaf" class="w-5 h-5 text-amber-500"></i>
+          </div>
+          <h3 class="text-base font-semibold text-stone-900 mb-2">Gut-Friendly Nutrition</h3>
+          <p class="text-sm text-stone-500 leading-relaxed">Low-FODMAP, gluten-free, anti-inflammatory diets — practical, evidence-based guidance without the overwhelm.</p>
+        </div>
+
+        <!-- F6 — CTA card -->
+        <div class="animate-on-scroll bg-amber-50 border border-amber-200 rounded-xl p-6 hover:border-amber-400 hover:shadow-lg transition-all flex flex-col justify-between" style="transition-delay:500ms">
+          <div>
+            <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
+              <i data-lucide="help-circle" class="w-5 h-5 text-amber-600"></i>
+            </div>
+            <h3 class="text-base font-semibold text-stone-900 mb-2">Still Have Questions?</h3>
+            <p class="text-sm text-stone-600 leading-relaxed mb-6">Can't find what you're looking for? Submit a question and we'll add it to the library.</p>
+          </div>
+          <a href="#about" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors self-start">
+            Ask a Question
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About ─── -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+
+        <!-- Left: Text -->
+        <div class="animate-slide-left">
+          <span class="inline-block text-xs font-semibold uppercase tracking-widest text-amber-600 mb-4">About GutSimple</span>
+          <h2 class="text-4xl font-semibold tracking-tight text-stone-900 mb-6 leading-tight">
+            Medicine Should Never Feel Like a Wall
+          </h2>
+          <div class="space-y-4">
+            <p class="text-stone-600 leading-relaxed">
+              Too many patients leave appointments more confused than when they arrived. Medical information online is either oversimplified or inaccessibly technical. GutSimple was built to close that gap.
+            </p>
+            <p class="text-stone-600 leading-relaxed">
+              We believe that an informed patient is a healthier patient. When you understand what's happening in your body, you ask better questions, follow through on treatment, and feel less afraid.
+            </p>
+            <p class="text-stone-600 leading-relaxed">
+              Our content is written by gastroenterology professionals and reviewed for accuracy — then rewritten by humans who know that "gastroparesis" needs more than a dictionary definition.
+            </p>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="animate-fade flex flex-wrap items-center gap-6 mt-8 pt-8 border-t border-stone-100" style="transition-delay:300ms">
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-amber-500"></i>
+              <span class="text-sm text-stone-600 font-medium">Clinically Reviewed</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="users" class="w-4 h-4 text-amber-500"></i>
+              <span class="text-sm text-stone-600 font-medium">Patient-First Voice</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="globe" class="w-4 h-4 text-amber-500"></i>
+              <span class="text-sm text-stone-600 font-medium">Hebrew &amp; English</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Testimonial card -->
+        <div class="animate-slide-right" style="transition-delay:200ms">
+          <div class="relative">
+            <!-- Background card (stacked effect) -->
+            <div class="absolute inset-0 bg-stone-100 border border-stone-200 rounded-2xl -z-10" style="transform: rotate(-1.5deg);"></div>
+            <!-- Main quote card -->
+            <div class="relative bg-stone-50 border border-stone-200 rounded-2xl p-8" style="transform: rotate(1deg);">
+              <div class="text-5xl text-amber-400 font-serif leading-none mb-4 select-none">"</div>
+              <p class="text-xl text-stone-700 font-medium leading-relaxed mb-6">
+                For the first time, I actually understood what my doctor was telling me.
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm font-semibold text-stone-900">Sarah M.</p>
+                  <p class="text-xs text-stone-500">Patient, Tel Aviv</p>
+                </div>
+                <!-- Stars using SVG directly to ensure fill works -->
+                <div class="flex items-center gap-0.5">
+                  <svg class="w-4 h-4 text-amber-400" fill="#fbbf24" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="w-4 h-4 text-amber-400" fill="#fbbf24" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="w-4 h-4 text-amber-400" fill="#fbbf24" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="w-4 h-4 text-amber-400" fill="#fbbf24" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg class="w-4 h-4 text-amber-400" fill="#fbbf24" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="bg-stone-900 text-stone-400">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+
+      <!-- Top row -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center mb-8">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <i data-lucide="activity" class="w-5 h-5 text-amber-500"></i>
+          <span class="font-bold text-white text-lg tracking-tight">GutSimple</span>
+        </div>
+        <!-- Nav -->
+        <nav class="flex items-center gap-6 justify-center flex-wrap">
+          <a href="#how-it-works" class="text-sm hover:text-white transition-colors">How It Works</a>
+          <a href="#features" class="text-sm hover:text-white transition-colors">Features</a>
+          <a href="#about" class="text-sm hover:text-white transition-colors">About</a>
+          <a href="#about" class="text-sm hover:text-white transition-colors">Contact</a>
+        </nav>
+        <!-- CTA -->
+        <div class="flex md:justify-end">
+          <a href="#features" class="bg-amber-500 hover:bg-amber-400 text-stone-900 text-sm font-semibold px-4 py-2 rounded-lg transition-colors">
+            Ask a Question
+          </a>
+        </div>
+      </div>
+
+      <!-- Hebrew tagline divider -->
+      <div class="text-center py-5 border-y border-stone-800">
+        <span class="text-stone-500 text-sm" dir="rtl" lang="he">גסטרואנטרולוגיה בגובה העיניים</span>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 mt-8">
+        <p class="text-sm">© 2026 GutSimple. All rights reserved.</p>
+        <p class="text-xs text-stone-500 text-center md:text-right max-w-sm">
+          Not a substitute for professional medical advice. Always consult your physician.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // IntersectionObserver — fires once per element
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.animate-on-scroll, .animate-fade, .animate-slide-left, .animate-slide-right')
+      .forEach(el => observer.observe(el));
+
+    // Navbar shadow on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('shadow-md', window.scrollY > 60);
+    }, { passive: true });
+  </script>
+</body>
+</html>
