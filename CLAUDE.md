@@ -17,17 +17,21 @@
 - NO border-radius > rounded-2xl
 - NO cramped spacing or tiny fonts (< 14px)
 
-## Color Palette
-| Role         | Tailwind Class      |
-|---|---|
-| Background   | bg-white            |
-| Surface/Card | bg-stone-50         |
-| Border       | border-stone-200    |
-| Headings     | text-stone-900      |
-| Body         | text-stone-700      |
-| Muted        | text-stone-500      |
-| Accent       | bg-amber-500 / text-amber-600 |
-| Accent light | bg-amber-50 / border-amber-200 |
+## Color Palette (Design System Tokens — gs-* Tailwind classes)
+| Token              | Hex       | Role                                  |
+|---|---|---|
+| gs-primary         | #1F3A5F   | Navy — headings, footer bg, trust     |
+| gs-secondary       | #2FA4A9   | Teal — primary CTAs, interactive      |
+| gs-secondary-dk    | #238E93   | Teal hover state                      |
+| gs-accent          | #5BC0EB   | Sky blue — icons, highlights          |
+| gs-bg              | #F7F9FB   | Off-white — default page background   |
+| gs-warm            | #F4EDE4   | Warm cream — Features section bg      |
+| gs-teal-tint       | #EAF5F6   | Light teal — eyebrow badges, F6 card  |
+| gs-teal-border     | #B3DDE0   | Teal border                           |
+| gs-warm-border     | #E5D9CE   | Warm card border                      |
+| gs-body            | #3D556E   | Body text — dark blue-gray            |
+| gs-muted           | #6E8A9E   | Muted / helper text                   |
+| gs-border          | #D6E4EE   | Default borders                       |
 
 ## Stack
 - Single HTML file
